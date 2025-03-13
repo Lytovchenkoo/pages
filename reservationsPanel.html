@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>reservations Panel</title>
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./styleReservation.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container">
+        <div class="header__logo">Bronyumo.ua</div>
+        <div class="header__controls">
+          <img src="./img/flag-uk.jpg" alt="English" class="header__language" />
+          <div class="header__notifications">
+            <svg
+              class="header__notifications-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                d="M9 16.75C9 16.75 9 19.25 12 19.25C15 19.25 15 16.75 15 16.75M17.25 12V10C17.25 7.1005 14.8995 4.75 12 4.75C9.10051 4.75 6.75 7.10051 6.75 10V12L4.75 16.25H19.25L17.25 12Z"
+                stroke="#212529"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+
+          <div class="header__profile">
+            <img
+              src="./img/profile-image.png"
+              class="header__profile-image"
+              alt="Profile"
+            />
+            <p class="header__profile-mode">Normal</p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="8"
+              height="5"
+              viewBox="0 0 8 5"
+              fill="none"
+            >
+              <path
+                d="M7.25 0.75L4 4.25L0.75 0.75"
+                stroke="#ADB5BD"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="container">
+        <table class="table">
+          <thead class="table__header">
+            <tr class="table__header-row">
+              <th class="table__header-item">#</th>
+              <th class="table__header-item">
+                <span class="table__header-item-line">
+                  Fullname
+                  <span class="table__header-item-group">
+                    <button class="table__header-item-group-button">
+                      <img src="./img/sort.svg" alt="sort" />
+                    </button>
+                    <button class="table__header-item-group-button">
+                      <img src="./img/filter.svg" alt="filter" />
+                    </button>
+                  </span>
+                </span>
+              </th>
+              <th class="table__header-item">
+                <span class="table__header-item-line">
+                  E-Mail
+                  <span class="table__header-item-group">
+                    <button class="table__header-item-group-button">
+                      <img src="./img/sort.svg" alt="sort" />
+                    </button>
+                  </span>
+                </span>
+              </th>
+              <th class="table__header-item">
+                <span class="table__header-item-line">
+                  Date
+                  <span class="table__header-item-group">
+                    <button class="table__header-item-group-button">
+                      <img src="./img/sort.svg" alt="sort" />
+                    </button>
+                  </span>
+                </span>
+              </th>
+              <th class="table__header-item">
+                <span class="table__header-item-line">
+                  Start time
+                  <span class="table__header-item-group">
+                    <button class="table__header-item-group-button">
+                      <img src="./img/sort.svg" alt="sort" />
+                    </button>
+                  </span>
+                </span>
+              </th>
+              <th class="table__header-item">
+                <span class="table__header-item-line">
+                  End time
+                  <span class="table__header-item-group">
+                    <button class="table__header-item-group-button">
+                      <img src="./img/sort.svg" alt="sort" />
+                    </button>
+                  </span>
+                </span>
+              </th>
+              <th class="table__header-item"></th>
+            </tr>
+          </thead>
+          <tbody class="table__body" id="tableBody"></tbody>
+        </table>
+        <section class="pagination">
+          <div class="pagination__group">
+            <button
+              class="pagination__button pagination__button--prev pagination__button--disabled"
+            >
+              <svg
+                width="5"
+                height="8"
+                viewBox="0 0 5 8"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                style="transform: rotate(-180deg)"
+              >
+                <path
+                  d="M1.45837 1.2915L4.37504 3.99984L1.45837 6.70817"
+                  stroke="#212529"
+                  stroke-width="1.25"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+            <button class="pagination__button">1</button>
+            <button class="pagination__button">2</button>
+            <button class="pagination__button">3</button>
+            <button class="pagination__button">4</button>
+            <button class="pagination__button pagination__button--next">
+              <svg
+                width="5"
+                height="8"
+                viewBox="0 0 5 8"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1.45837 1.2915L4.37504 3.99984L1.45837 6.70817"
+                  stroke="#212529"
+                  stroke-width="1.25"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="pagination__selector">
+            <div class="pagination__selector-dropdown">
+              <span class="pagination__selector-dropdown-text">10</span>
+              <svg
+                width="5"
+                height="8"
+                viewBox="0 0 5 8"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                style="transform: rotate(-90deg)"
+              >
+                <path
+                  d="M1.45837 1.2915L4.37504 3.99984L1.45837 6.70817"
+                  stroke="#212529"
+                  stroke-width="1.25"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <p class="pagination__selector-text">/Page</p>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+
+    <div class="modal" id="reservationModal">
+      <div class="modal__overlay"></div>
+      <div class="modal__content">
+        <button class="modal__close" id="modalClose">&times;</button>
+        <h2 class="modal__title">Booked table</h2>
+        <img src="./img/floor-plan.png" alt="Floor Plan" class="modal__image" />
+      </div>
+    </div>
+  </body>
+</html>
